@@ -5,6 +5,7 @@ from telethon.sync import TelegramClient, events
 from telethon.sessions import StringSession
 import os
 import time
+import asyncio
 
 # Instagram username
 INSTAGRAM_USERNAME = 'arabic.whales'
@@ -121,4 +122,4 @@ async def main():
         await asyncio.sleep(60)  # 60 seconds = 1 minute
 
 # Run the main function
-await main()
+asyncio.get_event_loop().run_until_complete(main())
